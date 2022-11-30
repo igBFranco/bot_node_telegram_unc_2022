@@ -13,6 +13,18 @@ bot.start(ctx => {
     ctx.replyWithMarkdownV2(`
     **Eu sou um bot em treinamento**
     [Google](https://www.google.com)`)
+
+    //respondenddo com fotos externas
+    ctx.replyWithPhoto({ url: 'https://www.gstatic.com/webp/gallery/1.jpg' });
+
+    //respondendo com fotos locais
+    ctx.replyWithPhoto({ 
+        source: `${__dirname}/1.png`,
+        caption: "Eu sou um bot em treinamento"
+    });
+
+    //respondendo com videos
+    ctx.replyWithVideo('https://www.commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4');
 });
 
 
